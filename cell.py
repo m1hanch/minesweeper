@@ -102,6 +102,7 @@ class Cell:
             self.cell_btn_object.configure(bg='SystemButtonFace')
             self.is_mine_candidate = False
 
+
     @staticmethod
     def randomize_mines():
         picked_cells = random.sample(Cell.all, settings.MINES_COUNT)
