@@ -50,7 +50,6 @@ def game():
     Cell.randomize_mines()
     root.mainloop()
 
-
 if __name__ == '__main__':
     game()
 

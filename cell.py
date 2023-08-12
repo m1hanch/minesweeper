@@ -94,7 +94,6 @@ class Cell:
                 cell.cell_btn_object.configure(image = bomb_photo)
         messagebox.showinfo('The end', "You've clicked on a mine")
 
-
     def right_click_actions(self, event):
         if not self.is_mine_candidate:
             self.cell_btn_object.configure(bg='orange')
