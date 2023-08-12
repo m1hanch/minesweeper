@@ -50,12 +50,7 @@ def game():
     Cell.randomize_mines()
     root.mainloop()
 
-def restart_game():
-    for cell in Cell.all:
-        cell.cell_btn_object.destroy()
-    Cell.all = []
-    Cell.cell_count = settings.CELL_COUNT
-    Cell.cell_count_label.configure(text=f'Cells left: {Cell.cell_count}')
 
-game()
+if __name__ == '__main__':
+    game()
 

@@ -83,9 +83,13 @@ class Cell:
         self.is_open = True
 
     def show_mine(self):
-        bomb_photo = PhotoImage(file=r'mine.png').subsample(20,20)
+        bomb_photo = PhotoImage(file='mine.png')
+        #можливий варіант із subsample
+        #bomb_photo = PhotoImage(file='mine.png').subsample(20,20)
+
         #Cell.all повертає список усіх клітинок (об'єктів Cell), які були створені
         for cell in Cell.all:
+            #якщо клітинка є міною то потрібно показати усі міни із зображенням і зупинити гру
             if cell.is_mine:
                 cell.cell_btn_object.configure(image = bomb_photo)
         messagebox.showinfo('The end', "You've clicked on a mine")
